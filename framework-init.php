@@ -89,6 +89,7 @@ function enableFeatures(){
 		add_action( 'template_redirect', array( $this, 'enable_less' ));
 		//wp_enqueue_script( "modernizr",  get_bloginfo('template_directory') . "/framework/packages/modernizr/modernizr.js", FALSE, "2.6.2", FALSE);
 
+
 	}
 		
 
@@ -139,6 +140,7 @@ function add_backstretch(){
 }//add_backstretch
 
 function enable_less(){
+	
 	wp_enqueue_script( "less_css",  get_bloginfo('template_directory') . "/framework/packages/less/less.min.js", FALSE , '1.3.3', FALSE);
 }//enable_less
 
