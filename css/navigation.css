@@ -23,7 +23,7 @@ nav select{
 
 
 
-nav.full_horizontal{
+nav.full_horizontal, div.nav{
 /*    width:100%;*/
 	position:relative;
     font-family:sans-serif;
