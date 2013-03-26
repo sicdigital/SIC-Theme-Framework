@@ -1,0 +1,137 @@
+/***************************
+
+Article
+
+***************************/
+.entry_header 
+
+	h1.entry_title{
+	margin-bottom:0px;
+}
+
+	article.post{
+		margin-bottom:40px;
+	}	
+
+
+	article .entry_header{
+		margin-bottom:10px;
+	}
+	
+	.alignleft {
+		margin: 20px 20px 20px 0px;
+		float: left;
+	}
+
+	.alignright {
+		float: right;
+		margin: 20px 0px 20px 20px;
+		
+	}
+	.aligncenter{
+		text-align:center;
+		display:block;
+		margin:auto;
+		margin:20px auto;
+	}
+
+	/*****************************************
+
+Comments
+
+****************************************/
+
+	.comment_meta img {
+		float:left;
+		margin-right:20px;
+	}
+
+	.comment_list{
+		border:1px solid #efefef;
+		margin:20px 0px;
+	
+	}
+
+	.comment_list .comment{
+		border-bottom:1px solid #efefef;
+		padding:20px;
+	}
+
+	.comment.even{
+		
+	}
+
+	.comment.odd{
+		
+	}
+
+	#respond{
+		border:1px solid #efefef;
+		padding:20px;
+		background-color:#efefef;
+	
+	}
+
+/* Comment Form */
+	.comment-form-comment label{
+		width:100%;
+		float:left;
+	}
+
+	.comment-form-comment textarea{
+		width:100%;
+		border:1px solid #efefef;
+	}
+	.form-allowed-tags{
+		margin-bottom:10px;
+		font-size:.8em;
+	}
+
+
+/***************************************
+
+Pagination
+
+*******************************************/
+
+	ul.pagination{
+		float:right;
+	}
+	
+	ul.pagination li{
+		float:left;
+	
+	}
+
+	ul.pagination li a{
+		float:left;
+		background-color:#8C0005;
+		color:#fff;
+		padding:0px 10px;
+		margin-left:2px;
+	
+	}
+
+	ul.pagination li a:hover{
+		background-color:#000;
+	
+	}
+
+/*curent page*/
+	ul.pagination #currentPage{
+		opacity:.5;
+	}
+
+	ul.pagination a#currentPage:hover{
+		background-color:#8C0005;
+	}
+	
+	
+		 
+ /***********************************
+ Calendar Widget
+ ************************************/
+		 
+ #wp-calendar td{
+	 padding:2px 5px;
+ }

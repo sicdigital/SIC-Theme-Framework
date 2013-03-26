@@ -1,0 +1,557 @@
+/*
+SIC Theme Framework - Master Stylesheet
+Author - Michael Chacon
+URL - http://sicdigital.com
+
+So what goes in this file.
+
+Structural Styles Only.  
+/**************************************************************************
+
+Global Structure Classes
+
+*************************************************************************/
+	
+
+		 
+	.logged-in {
+		 margin-top:28px !important;
+	 }
+	 .inner{
+		 margin:auto;
+	 }
+	 
+	#header .branding{
+			 text-align:left;
+		 }
+	 /*
+	 body_container wraps all the markup, adjust this width to choose the main width of the site.
+	 */
+
+
+	 #header .logo img{
+		 float:left; 
+	 	max-width:40%;
+	 	max-height:175px;
+	 }
+
+	.body_container{
+		width:1140px;
+		margin-top:20px;
+		margin:auto;
+	}
+
+	header#header{
+		margin-top:30px;
+	}
+	header#header .inner{
+		width:98%;
+	}
+	#content_block .inner{
+		width:94%;
+	}
+
+	/*
+	Primary Content with sidebars needs some space from the top, it's too much when full width
+	*/
+	#content_block #primary_content{
+		padding:20px 0 40px 0;
+	}
+	#content_block.aside-full #primary_content {
+		padding-top:20px;
+	}
+	
+	
+/**************************************************************************
+
+Asides
+
+*************************************************************************/
+
+	#content_block aside.aside{
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	
+	#content_block aside.aside .inner{
+		width:100%;
+		margin-top:20px;
+	}
+
+	
+	/*******************************************
+	Aside Right Only
+	********************************************/
+	
+	#content_block.aside-right #primary_content{
+		width:74%;
+		float:left;
+	}
+	
+	#content_block aside.aside-right{
+		float:right;
+		width:22%;
+	}
+	
+	
+	/*******************************************
+	Aside Left Only
+	*******************************************/
+	
+	#content_block.aside-left #primary_content{
+		width:75%;
+		float:right;
+	}
+	
+	#content_block aside.aside-left{
+		float:left;
+		width:22%;
+		margin-top:20px;
+	}
+	
+	
+	/*******************************************
+	Aside Left And Right
+	--Not Yet functioning, there is no current output that uses this markup
+	*******************************************/
+	
+	#content_block.aside-both #primary_content{
+		width:50%;
+		float:left;
+	}
+	
+	#content_block.aside-both aside.aside-right{
+		float:left;
+		width:25%;
+	
+	}
+	#content_block.aside-both aside.aside-left{
+		float:right;
+		width:25%;
+	}
+	
+
+/**************************************************************************
+
+Aside Widgets
+
+*************************************************************************/
+
+	.widget{margin-bottom:40px;}
+	
+	.widget-title{
+		margin-bottom:10px;
+	}
+
+/*****************************************************************************
+
+Footer
+	
+*****************************************************************************/
+	
+	footer#footer{
+	
+		background-color:#efefef;
+		padding-top:20px;
+	}
+	footer#footer .inner{
+		width:1100px;
+	}
+
+
+	footer#footer, footer#sub_footer{
+		width:1140px;
+		margin:auto;
+		margin-bottom:20px;
+	}
+
+		footer#sub_footer{
+		text-align:center;
+		color:#fff;
+		margin-top:20px;
+
+	}
+	
+/**************************************************************************
+Grid
+This is the default grid used in structure and shortcodes
+*************************************************************************/
+
+	.one_half{ width:49%; }
+	
+	.one_third{ width:30.66%;
+				margin-right:4% !important; }
+	
+	.two_third{ width:65.33%; }
+	
+	.one_fourth{ width:23.5%; }
+	
+	.three_fourth{ width:74%; }
+	
+	.one_fifth{ width:16.8%; }
+	
+	.two_fifth{ width:37.6%; }
+	
+	.three_fifth{ width:58.4%; }
+	
+	.four_fifth{ width:67.2%; }
+	
+	.one_sixth{ width:13.33%; }
+	
+	.five_sixth{ width:82.67%; }
+	
+	.one_half,.one_third,.two_third,.three_fourth,.one_fourth,.one_fifth,.two_fifth,.three_fifth,.four_fifth,.one_sixth,.five_sixth{ position:relative; margin-right:2%; float:left; }
+	
+	.last{ margin-right:0 !important; clear:right; }
+
+
+/**************************************************************************
+
+Grid
+
+/***************************************************************************/
+
+	.grid{
+		width:96%;
+		margin:auto;
+	}
+	
+	.entry_content .grid{
+		width:100%;
+	}
+	.grid .column{
+		float:left;
+	}
+	.grid .column .column.last{
+		margin-right:0;
+	}
+	.grid.columns_2 .column, {
+		width:48%;
+		margin-right:2%;
+	}
+	.grid.columns_3 .column{
+		width:31%;
+		margin-right:2%;
+	}
+	.grid.columns_4 .column{
+		width:23%;
+		margin-right:2.6%;
+	}
+
+
+
+	.grid.columns_5 .column{
+		width:18%;
+	}
+
+	.grid .row{
+		margin-bottom:20px;
+	}
+			
+	.column{
+		position:relative;
+	}
+
+
+
+
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+ /* Browser Resets */
+ .flex-container a:active,
+ .flexslider a:active,
+ .flex-container a:focus,
+ .flexslider a:focus {
+	 outline: none;
+ }
+ .slides,
+ .flex-control-nav,
+ .flex-direction-nav {
+	 margin: 0;
+	 padding: 0;
+	 list-style: none;
+ }
+
+ /* FlexSlider Necessary Styles
+ *********************************/ 
+ .flexslider {
+	 margin: 0;
+	 padding: 0;
+ }
+ .flexslider .slides > li {
+	 display: none;
+	 -webkit-backface-visibility: hidden;
+ }
+ /* Hide the slides before the JS is loaded. Avoids image jumping */
+ .flexslider .slides img {
+	 width: 100%;
+	 display: block;
+ }
+ .flex-pauseplay span {
+	 text-transform: capitalize;
+ }
+
+ /* Clearfix for the .slides element */
+ .slides:after {
+	 content: ".";
+	 display: block;
+	 clear: both;
+	 visibility: hidden;
+	 line-height: 0;
+	 height: 0;
+ }
+ html[xmlns] .slides {
+	 display: block;
+ }
+ * html .slides {
+	 height: 1%;
+ }
+
+ /* No JavaScript Fallback */
+ /* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+ .no-js .slides > li:first-child {
+	 display: block;
+ }
+
+ /*********************************************************
+ 
+  FlexSlider Default Theme
+ 
+ *********************************************************/
+ #page_slider.flexslider{
+ 	margin:0px;
+ }
+	 .flexslider {
+		 margin: 0 0 40px;
+		 background: #fff;
+	
+		 position: relative;
+		 -webkit-border-radius: 4px;
+		 -moz-border-radius: 4px;
+		 -o-border-radius: 4px;
+		 border-radius: 4px;
+		 box-shadow: 0 1px 4px rgba(0,0,0,.2);
+		 -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+		 -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+		 -o-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+		 zoom: 1;
+	 }
+	 .flex-viewport {
+		 max-height: 2000px;
+		 -webkit-transition: all 1s ease;
+		 -moz-transition: all 1s ease;
+		 transition: all 1s ease;
+	 }
+	 .loading .flex-viewport {
+		 max-height: 300px;
+	 }
+	 .flexslider .slides {
+		 zoom: 1;
+	 }
+
+	 .carousel li {
+		 margin-right: 5px
+	 }
+
+
+	 /* Direction Nav */
+	 .flex-direction-nav a {
+		 width: 30px;
+		 height: 30px;
+		 margin: -20px 0 0;
+		 display: block;
+		 background: url(../img/slider/bg_direction_nav.png) no-repeat 0 0;
+		 position: absolute;
+		 top: 50%;
+		 cursor: pointer;
+		 text-indent: -9999px;
+		 opacity: 0; 
+		 -webkit-transition: all .3s ease;
+	 }
+	 .flex-direction-nav .flex-next {
+		 background-position: 100% 0;
+		 right: -36px;
+	 }
+	 .flex-direction-nav .flex-prev {
+		 left: -36px;
+	 }
+	 .flexslider:hover .flex-next {
+		 opacity: 0.8;
+		 right: 5px;
+	 }
+	 .flexslider:hover .flex-prev {
+		 opacity: 0.8;
+		 left: 5px;
+	 }
+	 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+		 opacity: 1;
+	 }
+	 .flex-direction-nav .disabled {
+		 opacity: .3!important;
+		 filter: alpha(opacity=30);
+		 cursor: default;
+	 }
+
+	 /* Control Nav */
+	 .flex-control-nav {
+		 width: 100%;
+		 position: absolute;
+		 bottom: -40px;
+		 text-align: center;
+	 }
+	 .flex-control-nav li {
+		 margin: 0 6px;
+		 display: inline-block;
+		 zoom: 1; *display: inline;
+	 }
+	 .flex-control-paging li a {
+		 width: 11px;
+		 height: 11px;
+		 display: block;
+		 background: #666;
+		 background: rgba(0,0,0,0.5);
+		 cursor: pointer;
+		 text-indent: -9999px;
+		 -webkit-border-radius: 20px;
+		 -moz-border-radius: 20px;
+		 -o-border-radius: 20px;
+		 border-radius: 20px;
+		 box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	 }
+	 .flex-control-paging li a:hover {
+		 background: #333;
+		 background: rgba(0,0,0,0.7);
+	 }
+	 .flex-control-paging li a.flex-active {
+		 background: #000;
+		 background: rgba(0,0,0,0.9);
+		 cursor: default;
+	 }
+
+	 .flex-control-thumbs {
+		 margin: 5px 0 0;
+		 position: static;
+		 overflow: hidden;
+	 }
+	 .flex-control-thumbs li {
+		 width: 25%;
+		 float: left;
+		 margin: 0;
+	 }
+	 .flex-control-thumbs img {
+		 width: 100%;
+		 display: block;
+		 opacity: .7;
+		 cursor: pointer;
+	 }
+	 .flex-control-thumbs img:hover {
+		 opacity: 1;
+	 }
+	 .flex-control-thumbs .active {
+		 opacity: 1;
+		 cursor: default;
+	 }
+
+
+	 @media screen and (max-width: 860px) {
+		 .flex-direction-nav .flex-prev {
+			 opacity: 1;
+			 left: 0;
+		 }
+		 .flex-direction-nav .flex-next {
+			 opacity: 1;
+			 right: 0;
+		 }
+
+
+	 }
+	 
+	
+	 a img:hover{
+		 
+	 
+	 }
+		 .portfolio{
+			 background-color:#000;
+		 }
+		 
+		 
+		 
+		 /*
+		 Social Icons
+		 */
+
+
+
+				
+	ul.social_links{
+		text-align:right;
+				float:right;
+	margin-top:10px;}
+				
+	ul.social_links li{
+	display:inline;
+				
+	}
+	ul.social_links li a{
+		height:32px;
+		width:32px;
+		display:block;
+		float:left;
+		color:#fff;
+		margin:0px 3px;
+		opacity:.8;
+	}
+	
+	ul.social_links li a:hover{
+		opacity:1;
+	}
+	
+	ul.social_links .facebook{
+	background-image:url('../img/social/facebook.png');	
+	
+	}
+	ul.social_links .twitter{
+	background-image:url('../img/social/twitter.png');	
+	
+	}ul.social_links .pinterest{
+background-image:url('../img/social/pinterest.png');	
+	
+}
+
+	ul.social_links .linkedin{
+background-image:url('../img/social/linkedin.png');	
+	
+}
+
+	ul.social_links .instagram{
+background-image:url('../img/social/instagram.png');
+	
+}
+
+	ul.social_links .youtube{
+background-image:url('../img/social/youtube.png');	
+	
+}
+
+	
+	
+	ul.social_links .vimeo{
+background-image:url('../img/social/vimeo.png')	;
+	
+}
+
+video, iframe{
+	width:100%;
+}

@@ -1,0 +1,345 @@
+/**************************************************************************
+Navigation
+
+This navigation is completely LESS CSS Nested, controls for vertical and horizontal 
+versions are at the top of each styling, there are variables for height width and 
+*************************************************************************/
+.nav_right{
+	float:right;
+	height:44px;
+	margin:0 auto;
+	position: relative;
+}
+	
+nav select{
+	width:100%;
+	margin:auto;
+}
+
+
+/**************************************************************************
+	Navigation
+*************************************************************************/
+
+
+
+nav.full_horizontal{
+/*    width:100%;*/
+	position:relative;
+    font-family:sans-serif;
+	/*float:right;*/
+	background-color:#161616;
+	
+	> ul{
+	    position:relative;
+		z-index:100;
+	
+		> li {
+		    position:relative;
+		    float:left;
+			cursor:pointer;
+			
+
+			a  {
+			    color: #fff;
+			    text-decoration:none;
+			    font-size: 12px;
+				line-height:45px;
+
+            
+			    padding: 0px 14px;
+			    float:left;
+			
+				 &:hover{
+				    background-color: #666;
+				}
+				}/*end a */
+			
+			&:hover > a{
+				background-color:#252525;
+				}
+			
+		
+/*****************************************************
+Navigation Drop Downs
+*****************************************************/
+			&:hover > ul, &:hover > .drop{
+			    visibility:visible;
+			    opacity:1;
+			    top:100%;
+				}
+			
+			ul, .drop{
+	            visibility:hidden;
+	            position: absolute;
+	            top: 100%;
+	            opacity:0;
+	            -webkit-transition:all .3s ease-in-out;
+	            /* -webkit-transition:all 0.2s linear;*/
+	           
+			    background-color: #fff;
+				padding:2px;
+				border:1px solid #dfdfdf;
+				 }/*end drop downs*/
+		
+			 ul.right, .drop.right{
+					     right:0px;	 
+				 }
+			 
+			 ul{
+				 
+				 li{
+					 
+					 a{
+			             width: 150px;
+			            /* padding: 2px 12px; */
+						color:#999;
+						padding:8px;
+						border-bottom:1px dotted #DFDFDF;
+						line-height:22px;
+						
+						&:hover{
+							color:#222;
+							background-color:#fff;
+						}
+					 }
+					 
+					 &:last-child{
+					 border-bottom:none; 
+					 }
+			 
+ /*****************************************************
+ Navigation Drop Downs Level 2
+ *****************************************************/
+				 &:hover ul{
+					 top:0% !important;
+					}
+					
+				 ul{
+		             left: 100%;
+		             top: 0px;
+    
+		             border-left:1px solid #333;
+				 
+					 
+					 }/*end nested ul 2*/
+			
+				 }/*end nested li*/
+			 }/*end nested ul*/
+		
+		}/*end li */
+
+	}/*end ul */
+	
+}/*end full_horizontal */
+        
+	
+	
+	
+		
+/*****************************************************
+
+ Responsive Navigation (Left Vertical)
+
+
+*****************************************************/		
+
+
+/**********************************
+
+Begin SIC Off Canvas Navigation
+
+************************************/
+
+@navWidth:80%;
+@navBg:#252525;
+@barColor:#353535;
+@barHeight:50px;
+
+
+/**********************************
+
+Top Bar
+
+************************************/
+#responsive-nav{
+  height:@barHeight;
+  color:#fff;
+  background-color:@barColor;
+
+  width:100%;
+  z-index:9999;
+
+
+  top:0px;
+  display:none; 
+
+}
+
+#responsive-nav h4{
+  display:none;
+  color:#fff;
+  float:left;
+  margin-left:12px;
+  line-height:50px;
+}
+
+#responsive-nav h4.active{
+  display:block;
+}
+
+
+/**********************************
+
+Off Canvas Container
+
+************************************/
+
+.off-canvas-active .body_container, 
+.off-canvas-active #responsive-nav{
+	margin-left:3%;
+	padding-left:@navWidth;
+}
+
+.off-canvas-active .off-canvas{
+	width:@navWidth;	
+  margin-left:0%;
+  
+}
+
+
+
+.off-canvas{
+  background-color:@navBg;
+	border-right: 2px solid #1A1A1A;
+	box-shadow: inset -1px 0px 20px #000;
+ 
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+ 
+  
+	/*Width set to 0 by default, flys out with js*/
+	margin-left:-100%;
+	float:left;
+	overflow-x:hidden;
+	z-index: 9999;
+	position:absolute;
+	
+
+}
+
+/**********************************
+
+Nav Close Overlay
+
+This creates a big invisible div in content area when nav is active to target close, users don't have to hit the button again to close the off-canvas nav they can just touch the content area
+
+************************************/
+
+.off-canvas-active #responsive-nav-overlay{
+	height: 100%;
+	display: block;
+	position: absolute;
+	width: 100%;
+	z-index:9998;
+	overflow:hidden;
+	background-color:#000;
+	opacity:.5;
+
+}
+
+.off-canvas-active .body_wrap, .off-canvas-active #responsive-nav
+{
+
+	
+	margin-left:@navWidth;
+	
+	width:100%;
+}
+
+
+/*************************************
+
+Nav Activate Button
+Makes the navigation button/icon out of css
+
+*************************************/
+
+.off-canvas-active .responsive-button{
+	margin-left:-75%;
+}
+
+.responsive-button{
+	
+  background-color: rgb(131, 2, 15);
+	margin: 6px 0px 0px 10px;
+  float:left;
+
+	width: 22px;
+	height: 18px;
+	padding: 10px;
+  
+  .icon-bar{
+    display: block;
+    height: 3px;
+    margin-bottom:4px;
+    background-color: white;
+   }
+  
+
+}/*responsive-button*/
+
+  
+
+
+
+/**********************************
+
+Navigation Styles
+
+**********************************/
+
+
+nav.full_vertical{
+    font-family:sans-serif;
+}
+
+nav.full_vertical ul li {
+  position:relative;
+}
+    
+nav.full_vertical ul li a {
+
+	display: block;
+	color: white;
+	text-decoration: none;
+	font-size: 12px;
+	padding: 10px 0px 10px 12px;
+	
+  border-bottom: 1px solid #050404;
+	border-top: 1px solid #333;
+	
+}
+
+/* Submenu */    
+
+            
+nav.full_vertical  ul  li  ul {
+  display:none;
+  background-color: #333;
+  padding-left:5px;
+
+}
+nav.full_vertical  ul  li  ul li a{
+	border:none;
+}
+ 
+
+.container{
+  margin-top:20px;
+}
+		
+			
+	
