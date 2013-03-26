@@ -122,12 +122,17 @@ endif;
 
 function sidebar_position_class(){
 	global $sic_theme;
-	$sidebars = rwmb_meta('page_layout');
-	if($sidebars == ""){
-		$sidebars = $sic_theme->settings['pages']['layout'];
+	
+	$position = rwmb_meta('sic_page_layout');
+
+if($position == "default" || $position == ''){
+	$position = $sic_theme->settings['pages']['layout'];
 	}
+	$sidebar = rwmb_meta('sic_page_sidebar');
+	if($sidebar == ""){$sidebar = 'Default';}
+	
 	//Checks what the meta is set to and outputs the correct class
-	switch ($sidebars) {
+	switch ($position) {
 	case 'rsidebar':
 	echo 'right';
 	break;	

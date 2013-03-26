@@ -1,8 +1,9 @@
 <?php
 
 function sic_footer(){
-					GLOBAL $sic_theme;
+			
 
+			GLOBAL $sic_theme;
 			$footer_layout = $sic_theme->settings['footer']['layout'];
 
 			if($footer_layout == 'none'){
