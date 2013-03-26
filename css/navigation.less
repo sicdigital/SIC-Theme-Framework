@@ -145,17 +145,6 @@ Navigation Drop Downs
 *****************************************************/		
 
 
-/**********************************
-
-Begin SIC Off Canvas Navigation
-
-************************************/
-
-@navWidth:80%;
-@navBg:#252525;
-@barColor:#353535;
-@barHeight:50px;
-
 
 /**********************************
 
@@ -269,16 +258,20 @@ Makes the navigation button/icon out of css
 
 .off-canvas-active .responsive-button{
 	margin-left:-75%;
+	position: absolute !important;
+
 }
 
 .responsive-button{
 	
-	background-color: #83020F;
+	background-color: @responsiveButton;
 	margin: 6px 0px 0px 10px;
 	float: left;
 	width: 42px;
 	height: 38px;
 	padding: 10px;
+	cursor: pointer;
+
   
   .icon-bar{
     display: block;
