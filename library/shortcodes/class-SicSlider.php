@@ -122,16 +122,14 @@ class Slider
 		'easing' => NULL,               //{NEW} String => Determines the easing method used in jQuery transitions. jQuery easing plugin is supported!
 		'direction' => NULL,        //String => Select the sliding direction, 'horizontal' or 'vertical'
 		'reverse' => NULL,                 //{NEW} Boolean => Reverse the animation direction
-		'animationLoop' => NULL,             //Boolean => Should the animation loop? If false, directionNav will received 'disable' classes at either end
+		'animationLoop' => NULL,
 		'smoothHeight' => NULL,            //{NEW} Boolean => Allow height of the slider to animate smoothly in horizontal mode
 		'startAt' => NULL,                     //Integer => The slide that the slider should start on. Array notation (0 = first slide)
 		'slideshow' => NULL,                //Boolean => Animate slider automatically
 		'slideshowSpeed' => NULL,           //Integer => Set the speed of the slideshow cycling, in milliseconds
 		'animationSpeed' => NULL,            //Integer => Set the speed of animations, in milliseconds
 		'initDelay' => NULL,                   //{NEW} Integer => Set an initialization delay, in milliseconds
-		'randomize' => NULL,               //Boolean => Randomize slide order
- 
-		// Usability features
+		'randomize' => NULL,               //Boolean => Randomize slide order// Usability features
 		'pauseOnAction' => NULL,            //Boolean => Pause the slideshow when interacting with control elements, highly recommended.
 		'pauseOnHover' => NULL,            //Boolean => Pause the slideshow when hovering over slider, then resume when no longer hovering
 		'useCSS' => NULL,                   //{NEW} Boolean => Slider will use CSS3 transitions if available
@@ -277,4 +275,4 @@ http://lorempixel.com/400/200/sports/
 [slider_element]<img src="http://lorempixel.com/400/200/" />[/slider_element]
 [slider_element]<img src="http://lorempixel.com/400/200/sports/" />
 <p class="flex-caption">Captions and cupcakes. Winning combination.</p>[/slider_element]
-[/slider]
+[/slider]*/
