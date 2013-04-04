@@ -125,8 +125,14 @@ function sidebar_position_class(){
 	
 	$position = rwmb_meta('sic_page_layout');
 
-if($position == "default" || $position == ''){
+	if($position == "default" || $position == ''){
 	$position = $sic_theme->settings['pages']['layout'];
+	}
+
+	if(is_single() || is_archive()|| is_home()){
+		$position = $sic_theme->settings['blog']['layout'];
+				
+
 	}
 	$sidebar = rwmb_meta('sic_page_sidebar');
 	if($sidebar == ""){$sidebar = 'Default';}

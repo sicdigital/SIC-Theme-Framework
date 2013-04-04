@@ -69,7 +69,10 @@ class SicFramework
 			'pages' => array(
 							'title' => TRUE,
 							'layout' => 'right',
-							'sidebars' => array('default'))//page_settings
+							'sidebars' => array('default')),//page_settings
+			
+			'blog' => array('title' => TRUE,
+							'layout' => 'rsidebar')
 		); //defaults
 
 
