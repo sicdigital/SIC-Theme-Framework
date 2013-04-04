@@ -79,7 +79,7 @@ if (!function_exists('sic_logo')){
 		
 		function sic_logo(){
 			if(sic_option('header_logo')){
-				return'<div class="logo"><img src="' . sic_option('header_logo') . '"/></div>';
+				return'<div class="logo"><a href="/"><img src="' . sic_option('header_logo') . '"/></a></div>';
 
 	}else{
 
