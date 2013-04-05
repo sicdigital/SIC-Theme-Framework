@@ -6,25 +6,24 @@ Get's all the images from a page/posts gallery and returns as an array.
 **********************************************************/
 if ( ! function_exists( 'sic_post_gallery' ) ) :
 
-function sic_post_gallery(){
+function sic_post_gallery($image_size = 'MEDIUM', $class = ''){
 	
 	$content = array();
 	$attachments = get_children( array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' =>'image') );
 	$image = array();
-	foreach ( $attachments as $attachment_id => $attachment ) {
-								
-		if($attachment_id != $thumb_ID){ //don't include the main page thumbnail'
-								 
-		$image[] = get_image_path(wp_get_attachment_url( $attachment_id, 'FULL' ));
+		foreach ( $attachments as $attachment_id => $attachment ) {
 									
-		$thumb = get_bloginfo('stylesheet_directory') . '/framework/packages/timthumb/timthumb.php?src=' . $image . '&h=350&w=500' ;
-		$overlay = get_bloginfo('stylesheet_directory') . '/framework/packages/timthumb/timthumb.php?src=' . $image . '&w=800' ;
-	}
+		if($attachment_id != $thumb_ID){ //don't include the main page thumbnail'									 
+			$image[] = get_image_path(wp_get_attachment_url( $attachment_id, $image_size ));
+			$image_full[] =  get_image_path(wp_get_attachment_url( $attachment_id, FULL ));
+			$thumb = get_bloginfo('stylesheet_directory') . '/framework/packages/timthumb/timthumb.php?src=' . $image . '&h=350&w=500' ;
+			$overlay = get_bloginfo('stylesheet_directory') . '/framework/packages/timthumb/timthumb.php?src=' . $image . '&w=800' ;
+		}
 	}
 						
 						
 	foreach($image as $key => $url){
-	$content[] = '<img class="" src="' . $url .'"/>';
+	$content[] = '<a rel="lb[]" class="' . $class . '" href="' . $url . '"><img  src="' . $url .'"/></a>';
 								
 	}
 	return($content);	
