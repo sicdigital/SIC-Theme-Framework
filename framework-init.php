@@ -97,8 +97,8 @@ class SicFramework
 
 		// Dev Mode
 		if ($this->settings['dev_mode']){
-			add_action( 'template_redirect', array( $this, 'enable_less' ));
-			//wp_enqueue_script( "modernizr",  get_bloginfo('template_directory') . "/framework/packages/modernizr/modernizr.js", FALSE, "2.6.2", FALSE);
+			//add_action( 'template_redirect', array( $this, 'enable_less' ));
+			wp_enqueue_script( "modernizr",  get_bloginfo('template_directory') . "/framework/packages/modernizr/modernizr.js", FALSE, "2.6.2", FALSE);
 		}
 		
 		// Default Background Type
