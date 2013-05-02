@@ -11,11 +11,11 @@ session_start();
 //Jcrop and Jquery dependencies for cropable images 
 
 
-// add_action('admin_init', 'jcrop_init');
-// function jcrop_init(){
-//     wp_enqueue_script( 'jcrop');
-//     wp_enqueue_style('jcrop');
-// }
+add_action('admin_init', 'jcrop_init');
+function jcrop_init(){
+    wp_enqueue_script( 'jcrop');
+    wp_enqueue_style('jcrop');
+}
 
  
 class PostType
